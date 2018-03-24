@@ -60,3 +60,5 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
   > docker run -d --restart=always --name my-rabbitmq -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 25672:25672 rabbitmq
 
 - 其次在使用rabbitmq的时候,填写的host不在是localhost,而是通过 docker inspect CONTAINER-ID 中的 IP Address.
+
+**额外说一句: 当你渐渐熟悉了docker,你会慢慢爱上它,会觉得它非常方便.**
