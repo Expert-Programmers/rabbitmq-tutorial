@@ -30,7 +30,7 @@ REPOSITORY            TAG                 IMAGE ID            CREATED           
 rabbitmq              latest              b17bd9d70e8b        9 days ago          127 MB
 ```
 - 运行rabbitmq镜像:
-> docker run -d --name my-rabbitmq -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 25672:25672 rabbitmq
+> docker run --name rabbitmq -d -p 4369:4369 rabbitmq
 - 查看自己已经运行的镜像:
 > docker ps
 
