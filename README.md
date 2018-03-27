@@ -1,4 +1,4 @@
-# Introduction
+## 基于Python的rabbitmq教程.
 
 ### 安装:(推荐使用docker的镜像,这样也不会“污染”本地环境)
 
