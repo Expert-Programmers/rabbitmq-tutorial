@@ -1,4 +1,4 @@
-# Publish / Subscribe
+# 发布 / 订阅
 
 **(using the Pika Python client)**
 
