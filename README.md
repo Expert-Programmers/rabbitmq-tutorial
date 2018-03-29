@@ -40,14 +40,17 @@ rabbitmq              latest              b17bd9d70e8b        9 days ago        
 ```
 Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.27/containers/json: dial unix /var/run/docker.sock: connect: permission denied
 ```
-因为本机与docker通信是socket通信，也就是通过 '/var/run/docker.sock' socket文件通信的,而这个文件的owner是root
 
-> srw-rw---- 1 root docker 0 Mar 24 21:31 /var/run/docker.sock
+默认情况下,*docker*命令会使用Unix socket与 Docker引擎通信.而只有*root*和*docker*组的用户才可以访问 Docker 引擎和 Unix socket.
+处于安全考虑,一般Linux系统上不会直接使用root用户.因此更好的做法是将使用*docker*的用户加入 *docker* 用户组.
 
-对于你自己是没有权限使用这个文件的,所以你要为你添加权限才可以使用,所以才要运行:
-> sudo chmod o+wr /var/run/docker.sock
+- 建立 *docker* 用户组
 
-或者其他方式什么都行,只要你能拿到读写权限就可以.
+> sudo groupadd docker
+
+- 将当前用户加入 *docker* 用户组
+
+> sudo usermod -aG docker $USER
 
 - 你会遇到当你再次开启电脑之后,运行 'docker ps' 的时候,看不到运行的容器, 请运行 'docker ps -a'，这是你会看到你的容器,你会看到你之前运行的那个容器的status是Exit状态.
   
