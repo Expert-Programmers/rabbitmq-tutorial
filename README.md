@@ -1,5 +1,7 @@
 ## 基于Python的rabbitmq教程.
 
+## 文档链接: [https://ltoddy.github.io/rabbitmq-tutorial/](https://ltoddy.github.io/rabbitmq-tutorial/)
+
 ### 安装:(推荐使用docker的镜像,这样也不会“污染”本地环境)
 
 **基于Ubuntu**
@@ -53,7 +55,7 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 > sudo usermod -aG docker $USER
 
 - 你会遇到当你再次开启电脑之后,运行 'docker ps' 的时候,看不到运行的容器, 请运行 'docker ps -a'，这是你会看到你的容器,你会看到你之前运行的那个容器的status是Exit状态.
-  
+
   你可以:
 
   > docker restart CONTAINER-ID
