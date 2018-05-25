@@ -1,6 +1,6 @@
 ## 基于Python的rabbitmq教程.
 
-## 文档链接: [https://ltoddy.github.io/rabbitmq-tutorial/](https://ltoddy.github.io/rabbitmq-tutorial/)
+## 文档链接: [https://expert-programmers.github.io/rabbitmq-tutorial/](https://expert-programmers.github.io/rabbitmq-tutorial/)
 
 ### 安装:(推荐使用docker的镜像,这样也不会“污染”本地环境)
 
